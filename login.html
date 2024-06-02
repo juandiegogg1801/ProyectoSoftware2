@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style>
+    body,
+    html {
+      height: 100%;
+      background: url('Images/gimnasio.jpeg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .card {
+      background-color: #343a40;
+      color: white;
+      padding: 1rem;
+      padding-top: -1rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      max-width: 400px;
+      position: relative;
+    }
+
+    .form-control:focus {
+      box-shadow: none;
+      border-color: #007bff;
+    }
+
+    .modal-header {
+      border-bottom: none;
+    }
+
+    .btn-custom {
+      background-color: #ffc107;
+      border-color: #ffc107;
+      color: black;
+    }
+
+    .btn-custom:hover {
+      background-color: #e0a800;
+      border-color: #d39e00;
+    }
+
+    .login-title {
+      border-bottom: 2px solid #ffc107;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .logo-container {
+      position: relative;
+      margin-bottom: 0;
+      text-align: center;
+    }
+
+    .logo-main {
+      position: relative;
+      top: -15px;
+      z-index: 2;
+      width: 100%;
+      max-width: 400px;
+      margin-bottom: -20px;
+    }
+
+    .logo-overlay {
+      position: absolute;
+      top: -290px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      z-index: 1;
+      width: 400px;
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container h-100">
+    <div class="row justify-content-center h-100 align-items-center">
+      <div class="col-md-6 mx-auto">
+        <div class="card">
+          <div class="logo-container">
+            <img src="Images/png-transparent-gym-logo-mark-gym-fitness.png" alt="Gym Logo" class="logo-overlay">
+            <img src="Images/uptc_log_2021.png" alt="UPTC Logo" class="logo-main">
+          </div>
+          <h3 class="text-center login-title">Iniciar Sesión</h3>
+          <form>
+            <div class="form-group">
+              <label for="Usuario">Nombre de usuario</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-user"></i></span>
+                </div>
+                <input type="text" class="form-control" id="Usuario" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="Clave">Clave</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                </div>
+                <input type="password" class="form-control" id="Clave" required>
+              </div>
+            </div>
+            <div class="form-group text-center">
+              <button type="button" class="btn btn-custom" id="BotonLogin" onclick="location.href='iniciar_sesion.html'">Iniciar Sesión</button>
+            </div>            
+            <div class="form-group text-center">
+              <a href="registrarse.html" id="NuevoUsuario" class="btn btn-custom">Registrarse</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
