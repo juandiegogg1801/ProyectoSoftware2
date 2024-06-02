@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrarse</title>
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style>
+    body,
+    html {
+      height: 100%;
+      background: url('Images/gimnasio.jpeg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .card {
+      background-color: #343a40;
+      color: white;
+      padding: 1rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      max-width: 350px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 0.5rem;
+    }
+
+    .form-control:focus {
+      box-shadow: none;
+      border-color: #007bff;
+    }
+
+    .btn-custom {
+      background-color: #ffc107;
+      border-color: #ffc107;
+      color: black;
+    }
+
+    .btn-custom:hover {
+      background-color: #e0a800;
+      border-color: #d39e00;
+    }
+
+    .login-title {
+      border-bottom: 2px solid #ffc107;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+    }
+
+    .logo-container {
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .logo-main {
+      width: 100%;
+      max-width: 300px;
+      margin-bottom: -20px;
+    }
+
+    .logo-overlay {
+      position: absolute;
+      top: -290px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      z-index: 1;
+      width: 300px;
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container h-100">
+    <div class="row justify-content-center h-100 align-items-center">
+      <div class="col-md-6 mx-auto">
+        <div class="card">
+          <div class="logo-container">
+            <img src="Images/png-transparent-gym-logo-mark-gym-fitness.png" alt="Gym Logo" class="logo-overlay">
+            <img src="Images/uptc_log_2021.png" alt="UPTC Logo" class="logo-main">
+          </div>
+          <h3 class="text-center login-title">Registrarse</h3>
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="Nombres">Nombres</label>
+                <input type="text" class="form-control" id="Nombres" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="Apellidos">Apellidos</label>
+                <input type="text" class="form-control" id="Apellidos" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="UsuarioInstitucional">Usuario institucional</label>
+              <input type="text" class="form-control" id="UsuarioInstitucional" required>
+            </div>
+            <div class="form-group">
+              <label for="Contrasena">Contraseña</label>
+              <input type="password" class="form-control" id="Contrasena" required>
+            </div>
+            <div class="form-group">
+              <label for="FechaNacimiento">Fecha de nacimiento</label>
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                  <select class="form-control" id="Dia" required>
+                    <option value="">Día</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-4">
+                  <select class="form-control" id="Mes" required>
+                    <option value="">Mes</option>
+                    <option value="1">Enero</option>
+                    <option value="2">Febrero</option>
+                    <option value="3">Marzo</option>
+                    <option value="4">Abril</option>
+                    <option value="5">Mayo</option>
+                    <option value="6">Junio</option>
+                    <option value="7">Julio</option>
+                    <option value="8">Agosto</option>
+                    <option value="9">Septiembre</option>
+                    <option value="10">Octubre</option>
+                    <option value="11">Noviembre</option>
+                    <option value="12">Diciembre</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-4">
+                  <select class="form-control" id="Ano" required>
+                    <option value="">Año</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Género</label>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Genero" id="Mujer" value="Mujer">
+                    <label class="form-check-label" for="Mujer">Mujer</label>
+                  </div>
+                </div>
+                <div class="form-group col-md-6">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Genero" id="Hombre" value="Hombre">
+                    <label class="form-check-label" for="Hombre">Hombre</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group text-center">
+              <button type="button" class="btn btn-custom btn-md" onclick="location.href='registrarse_exitoso.html'">Registrarse</button>
+            </div>
+            <div class="form-group text-center">
+              <p>¿Ya tienes una cuenta? <a href="login.html" class="btn btn-link">Inicia sesión</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Llenar los días del 1 al 31
+      const diaSelect = document.getElementById("Dia");
+      for (let i = 1; i <= 31; i++) {
+        const option = document.createElement("option");
+        option.value = i;
+        option.textContent = i;
+        diaSelect.appendChild(option);
+      }
+
+      // Llenar los años del 2024 al 1960
+      const anoSelect = document.getElementById("Ano");
+      for (let i = 2024; i >= 1960; i--) {
+        const option = document.createElement("option");
+        option.value = i;
+        option.textContent = i;
+        anoSelect.appendChild(option);
+      }
+
+      // Cambiar la cantidad de días según el mes y año seleccionados
+      document.getElementById("Mes").addEventListener("change", ajustarDias);
+      document.getElementById("Ano").addEventListener("change", ajustarDias);
+
+      function ajustarDias() {
+        const mes = document.getElementById("Mes").value;
+        const ano = document.getElementById("Ano").value;
+        const diasEnMes = new Date(ano, mes, 0).getDate();
+
+        while (diaSelect.options.length > 1) {
+          diaSelect.remove(1);
+        }
+
+        for (let i = 1; i <= diasEnMes; i++) {
+          const option = document.createElement("option");
+          option.value = i;
+          option.textContent = i;
+          diaSelect.appendChild(option);
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
